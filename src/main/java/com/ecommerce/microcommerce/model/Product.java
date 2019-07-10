@@ -23,18 +23,26 @@ public class Product {
     private int prix;
 
     //information que nous ne souhaitons pas exposer
+
     private int prixAchat;
+
+    //Attribut ajouté par moi pour l'execercie
+//    @Min(value = 1)
+    private int prixVente;
+
+
 
     //constructeur par défaut
     public Product() {
     }
 
     //constructeur pour nos tests
-    public Product(int id, String nom, int prix, int prixAchat) {
+    public Product(int id, String nom, int prix, int prixAchat,int prixVente) {
         this.id = id;
         this.nom = nom;
         this.prix = prix;
         this.prixAchat = prixAchat;
+        this.prixVente = prixVente;
     }
 
     public int getId() {
@@ -67,6 +75,14 @@ public class Product {
 
     public void setPrixAchat(int prixAchat) {
         this.prixAchat = prixAchat;
+    }
+
+    public int getPrixVente() {
+        return prixVente;
+    }
+
+    public void setPrixVente(int prixVente) {
+        this.prixVente = prixVente;
     }
 
     @Override
